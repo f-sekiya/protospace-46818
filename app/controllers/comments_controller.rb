@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  before_action :authenticate_user!, only: :create
   before_action :set_prototype, only: :create
 
   def create
